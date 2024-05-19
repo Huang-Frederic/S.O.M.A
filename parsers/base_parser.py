@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from utils.wechat import WeChatNotifier
 import json
 
 
@@ -9,8 +10,9 @@ class BaseParser(ABC):
 
     # @abstractmethod
     def send_notification(self, new_litters):
-        print("new litters: ", new_litters)
-        pass
+        wechat_notifier = WeChatNotifier()
+        wechat_notifier.send_wechat_notification(
+            self.name, self.url, new_litters)
 
     # Display the litters >> Debugging purpose
     def display_litter(self):
@@ -18,7 +20,7 @@ class BaseParser(ABC):
             print(litter)
 
     # Check if the litters have changed
-    def check_for_changes(self):
+    def find_data_changes(self):
         # get the litters from the storage file
         if self.storage_path.exists():
             with open(self.storage_path, "r", encoding="utf-8") as f:

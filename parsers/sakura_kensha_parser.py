@@ -16,7 +16,7 @@ class SakuraKenshaParser(BaseParser):
         self.html = fetch_html(self.url)
         self.litters = self.parse(self.html)
 
-        new_litters = self.check_for_changes()
+        new_litters = self.find_data_changes()
 
         if new_litters:
             self.send_notification(new_litters)
