@@ -51,17 +51,17 @@ class WeChatNotifier:
             return None
 
         # Create the notification content
-        content = "ALERT: " + name + " new litters available\n" + \
-            "\n".join("\nFather: " + litter['father'] for litter in new_litters) + \
-            "\n".join("\nMother: " + litter['mother'] for litter in new_litters) + \
-            "\n".join("\nPedigree: " + litter['pedigree'] for litter in new_litters) + \
-            "\n".join("\nBirthdate: " + litter['birthdate'].__str__() for litter in new_litters) + \
-            "\n".join("\nLitter Quantity: " + litter['litter_quantity'].__str__() for litter in new_litters) + \
-            "\n".join(
-                "\nExpected Races: " + ", ".join(race for race, flag in zip(
-                    ["roux", "sesame", "noir et feu"], litter['expected_race']) if flag)
-                for litter in new_litters
-            ) + "\n\n" + web_url
+        content = f"ALERT: {name} new litters available\n"
+        for litter in new_litters:
+            content += (
+                f"\nFather: {litter['father']}\n"
+                f"Mother: {litter['mother']}\n"
+                f"Pedigree: {litter['pedigree']}\n"
+                f"Birthdate: {litter['birthdate']}\n"
+                f"Litter Quantity: {litter['litter_quantity']}\n"
+                f"Expected Races: {', '.join(race for race, flag in zip(['roux', 'sesame', 'noir et feu'], litter['expected_race']) if flag)}\n"
+            )
+        content += f"\n\n{web_url}"
 
         print(content)
 
