@@ -26,6 +26,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install Playwright
+        run: |
+          playwright install
+
+      - name: Install Playwright Dependencies
+        run: |
+          playwright install-deps
+
       - name: Run script
         env:
           WX_APP_ID: ${{ secrets.WX_APP_ID }}
