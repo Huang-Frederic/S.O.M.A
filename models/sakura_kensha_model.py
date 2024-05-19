@@ -17,7 +17,7 @@ class LitterInfo:
             "father": self.father,
             "mother": self.mother,
             "pedigree": self.pedigree,
-            "litter": self.litter,
+            "litter_quantity": self.litter,
             "birthdate": self.birthdate.isoformat() if self.birthdate else None,
             "expected_race": self.expected_race,
         }
