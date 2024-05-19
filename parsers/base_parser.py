@@ -7,8 +7,9 @@ class BaseParser(ABC):
     def parse(self, html):
         pass
 
-    @abstractmethod
+    # @abstractmethod
     def send_notification(self, new_litters):
+        print("new litters: ", new_litters)
         pass
 
     # Display the litters >> Debugging purpose
@@ -31,8 +32,8 @@ class BaseParser(ABC):
         # compare the current litters with the previous ones
         current_litters = [litter.to_dict() for litter in self.litters]
         if current_litters != previous_litters:
+            new_litters = []
             for litter in current_litters:
-                new_litters = []
                 if litter not in previous_litters:
                     new_litters.append(litter)
             return new_litters
