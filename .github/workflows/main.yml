@@ -1,0 +1,45 @@
+name: Soma Script
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright
+        run: |
+          playwright install
+
+      - name: Install Playwright Dependencies
+        run: |
+          playwright install-deps
+
+      - name: Run script
+        env:
+          WX_APP_ID: ${{ secrets.WX_APP_ID }}
+          WX_SECRET_ID: ${{ secrets.WX_SECRET_ID }}
+          WX_KF_ACCOUNT: ${{ secrets.WX_KF_ACCOUNT }}
+          WX_NICK_NAME: ${{ secrets.WX_NICK_NAME }}
+          WX_PASSWORD: ${{ secrets.WX_PASSWORD }}
+          WX_TOUSER: ${{ secrets.WX_TOUSER }}
+        run: python main.py
