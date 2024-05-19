@@ -25,6 +25,8 @@ class BaseParser(ABC):
         if self.storage_path.exists():
             with open(self.storage_path, "r", encoding="utf-8") as f:
                 previous_litters = json.load(f)
+        else:
+            previous_litters = []
 
         # save the current litters to the storage file
         with open(self.storage_path, "w", encoding="utf-8") as f:
