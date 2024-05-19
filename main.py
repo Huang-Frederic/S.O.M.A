@@ -1,4 +1,6 @@
 from parsers.sakura_kensha_parser import SakuraKenshaParser
+import os
+import time
 
 
 def main():
@@ -7,4 +9,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    os.makedirs("data", exist_ok=True)
+
+    while True:
+        main()
+        time.sleep(300)
