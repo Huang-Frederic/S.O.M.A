@@ -11,4 +11,6 @@ def main():
 if __name__ == "__main__":
     os.makedirs("data", exist_ok=True)
 
+    # while True:
     main()
+    # time.sleep(300) # Check every 5 minutes
