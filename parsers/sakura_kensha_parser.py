@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
 import re
 import dateparser
+import json
+from pathlib import Path
+
 
 from .base_parser import BaseParser
 from utils.fetch import fetch_html
@@ -12,8 +15,12 @@ class SakuraKenshaParser(BaseParser):
         self.url = url
         self.html = fetch_html(self.url)
         self.litters = self.parse(self.html)
+        self.storage_path = Path("data/sakura_kensha.json")
 
-        self.display_litters()
+        self.previous_litters = self.load_previous_litters()
+        self.check_for_changes()
+        self.save_litters()
+        # self.display_litters()
 
     def parse(self, html):
         # Parse the html and return a list of elements
@@ -66,3 +73,21 @@ class SakuraKenshaParser(BaseParser):
     def display_litters(self):
         for litter in self.litters:
             print(litter)
+
+    def save_litters(self):
+        with open(self.storage_path, "w", encoding="utf-8") as f:
+            json.dump([litter.to_dict() for litter in self.litters],
+                      f, ensure_ascii=False, indent=4, default=str)
+
+    def load_previous_litters(self):
+        if self.storage_path.exists():
+            with open(self.storage_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        return []
+
+    def check_for_changes(self):
+        current_litters = [litter.to_dict() for litter in self.litters]
+        if current_litters != self.previous_litters:
+            print("Il y a eu un changement !")
+        else:
+            print("Pas de changement.")
