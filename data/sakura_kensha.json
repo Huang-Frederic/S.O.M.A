@@ -1,0 +1,86 @@
+[
+    {
+        "father": "Polly Go Sakura Kensha",
+        "mother": "Miho Kuroma Homare Go Miho Hatsushibaso",
+        "pedigree": "FCI & NIPPO",
+        "litter": 5,
+        "birthdate": "2024-02-25",
+        "expected_race": [
+            0,
+            1,
+            1
+        ]
+    },
+    {
+        "father": "Soraka Go Sakura Kensha",
+        "mother": "Jouno Kokuteiou Go Iino Umajousou",
+        "pedigree": "FCI & NIPPO",
+        "litter": 3,
+        "birthdate": "2024-02-27",
+        "expected_race": [
+            0,
+            1,
+            1
+        ]
+    },
+    {
+        "father": "Tinaka Go Sakura Kensha",
+        "mother": "Miho Kuroma Homare Go Miho Hatsushibaso",
+        "pedigree": "FCI & NIPPO",
+        "litter": 5,
+        "birthdate": "2024-03-01",
+        "expected_race": [
+            1,
+            0,
+            1
+        ]
+    },
+    {
+        "father": "Gion Corner To Sydney",
+        "mother": " Puchi Zakuro Go Sakura Kensha",
+        "pedigree": "FCI & NIPPO",
+        "litter": 4,
+        "birthdate": "2024-03-01",
+        "expected_race": [
+            1,
+            0,
+            1
+        ]
+    },
+    {
+        "father": "Takashi Kimiko Emi ",
+        "mother": " Shouzougoma Go Sakura Kensha",
+        "pedigree": "FCI & NIPPO",
+        "litter": 5,
+        "birthdate": "2024-03-05",
+        "expected_race": [
+            1,
+            0,
+            0
+        ]
+    },
+    {
+        "father": "Akai Hana Maddy",
+        "mother": "Kaga No Shouei Go Sapporo Kagasou",
+        "pedigree": "FCI & NIPPO",
+        "litter": 2,
+        "birthdate": "2024-03-09",
+        "expected_race": [
+            1,
+            0,
+            1
+        ]
+    },
+    {
+        "father": "Robine Go Sakura Kensha",
+        "mother": "Kaga No Shouei Go Sapporo Kagasou",
+        "pedigree": "FCI & NIPPO",
+        "litter": 3,
+        "birthdate": "2024-03-29",
+        "expected_race": [
+            1,
+            1,
+            1
+        ]
+    }
+]
