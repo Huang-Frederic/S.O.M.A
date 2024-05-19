@@ -34,4 +34,4 @@ jobs:
           WX_NICK_NAME: ${{ secrets.WX_NICK_NAME }}
           WX_PASSWORD: ${{ secrets.WX_PASSWORD }}
           WX_TOUSER: ${{ secrets.WX_TOUSER }}
-        run: python your_script.py
+        run: python main.py
