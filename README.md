@@ -29,12 +29,12 @@ System Requirements:
 
 These environnement variables are required for WeChat integrations :
 ```env
-WX_APP_ID='your_wechat_app_id'          # In the first section of the web when you log in
-WX_SECRET_ID='your_wechat_secret_id'    # In the first section of the web when you log in
+WX_APP_ID='your_wechat_app_id'       
+WX_SECRET_ID='your_wechat_secret_id'    
 WX_KF_ACCOUNT='your_wechat_kf_account'  # identifier of the service account, must be "x@x" format
 WX_NICK_NAME='your_wechat_nickname'     # nickname of the service account, the one displayed when you receive a message
 WX_PASSWORD='your_wechat_password'      # password of the service account, not very important
-WX_TOUSER='your_wechat_touser_id'       # 3 sections below, you can scan the qr_code with your Wechat on mobile, you will receive an unique id for each user, add every account you wan't to be notified separated by a comma (id1,id2...)
+WX_TOUSER='your_wechat_touser_id'       # You can make people subscribe by scanning the QR Code from the Wechat dashboard page, you will receive an unique id for each user, add every account you wan't to be notified separated by a comma (id1,id2...)
 ```
 ## 💻 Installation
 
