@@ -5,8 +5,6 @@ S.O.M.A (Shiba Observe Monitoring Assistant) is a tool designed to monitor and t
 
 ## 🔮 Stack
 
-Add badges from somewhere like: [shields.io](https://shields.io/)
-
 ![Static Badge](https://img.shields.io/badge/Docker-gray?style=for-the-badge&logo=Docker)
 ![Static Badge](https://img.shields.io/badge/Wechat-gray?style=for-the-badge&logo=Wechat)
 ![Static Badge](https://img.shields.io/badge/python-gray?style=for-the-badge&logo=Python)
@@ -14,12 +12,6 @@ Add badges from somewhere like: [shields.io](https://shields.io/)
 ![Static Badge](https://img.shields.io/badge/render-gray?style=for-the-badge&logo=render)
 ![Static Badge](https://img.shields.io/badge/playwright-gray?style=for-the-badge&logo=playwright)
 ![Static Badge](https://img.shields.io/badge/bs4-gray?style=for-the-badge&logo=bs4)
-## 🗺️ Roadmap
-
-- [x]  Scrap Sakura Kensha 
-- [ ]  Scrap Chuken Kikusou
-- [x]  Add Wechat Notifications
-- [ ]  Add Discord Notifications
 
 ## 🚀 Getting Started 
 
@@ -114,6 +106,14 @@ Go to your repository, navigate to "Secrets" and add the following secrets :
 - WX_TOUSER
 
 Now you can set up Github Actions workflow from `./workflows/main.yml` that is configured to be manually activated, you can uncheck the comented code for schedule functionality.
+
+## 🗺️ Roadmap
+
+- [x]  Scrap Sakura Kensha 
+- [ ]  Scrap Chuken Kikusou
+- [x]  Add Wechat Notifications
+- [ ]  Add Discord Notifications
+
 ## 🚶‍♂️ Author
 
 - [@Huang-Frederic](https://github.com/Huang-Frederic)
