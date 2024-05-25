@@ -107,12 +107,12 @@ Go to your repository, navigate to "Secrets" and add the following secrets :
 
 Now you can set up Github Actions workflow from `./workflows/main.yml` that is configured to be manually activated, you can uncheck the comented code for schedule functionality.
 
-## 🗺️ Roadmap
+## 🗺️ Future possible features
 
-- [x]  Scrap Sakura Kensha 
-- [ ]  Scrap Chuken Kikusou
+- [x]  Scrap Sakura Kensha web site
 - [x]  Add Wechat Notifications
 - [ ]  Add Discord Notifications
+- [ ]  Scrap Chuken Kikusou web site
 
 ## 🚶‍♂️ Author
 
